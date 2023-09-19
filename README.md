@@ -52,13 +52,13 @@ To run all benchmarks, please execute the `./Release/benchmarks/run-benchmarks` 
 Examples (in the context of `./Release/benchmarks`):
 
 ```sh
-./run-benchmarks -f ../datasets/cage10.mtx -o ../results/cage10 -s ../results/cage10/closure.mtx
+./generalized-floyd-warshall -f ../assets/cage10.mtx -o ../out
 
-./increase-column -f ../datasets/cage10.mtx -o ../results/cage10 -n 1000 -s ../results/cage10/closure.mtx
+./run-benchmarks -f ../assets/cage10.mtx -o ../out -s ../out/generalized-floyd-warshall_cage-10/F.mtx
 
-./increase-row -f ../datasets/cage10.mtx -o ../results/cage10 -n 1000 -s ../results/cage10/closure.mtx
+./increase-column -f ../assets/cage10.mtx -o ../out -n 1000 -s ../out/generalized-floyd-warshall_cage-10/F.mtx
 
-./decrease-idempotent -f ../datasets/cage10.mtx -o ../results/cage10 -n 1000 -s ../results/cage10/closure.mtx
+./increase-row -f ../assets/cage10.mtx -o ../out -n 1000 -s ../out/generalized-floyd-warshall_cage-10/F.mtx
 
-./generalized-floyd-warshall -f ../datasets/cage10.mtx -o ../results/cage10 -s ../results/cage10/closure.mtx
+./decrease-idempotent -f ../assets/cage10.mtx -o ../out -n 1000 -s ../out/generalized-floyd-warshall_cage-10/F.mtx
 ```
